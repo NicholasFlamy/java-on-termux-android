@@ -1,21 +1,25 @@
-# termux-ecj-dx
-Termux搭建简单java环境的shell脚本
-## 搭建
-安装基本软件
+# Java on Termux (Android)
+Bash script that compiles java files with `ecj`, converts to dex with `dx`, and runs with `dalvikvm`
+## Setup
+### Dependencies
 ```
 pkg install ecj dx termux-tools
 ```
-克隆termux-ecj-dx
+Clone the repo and enter
 ```
-git clone https://github.com/Vlary/termux-ecj-dx.git
+git clone https://github.com/NicholasFlamy/java-on-termux-android.git
+cd java-on-termux-android
 ```
-在任意位置可用
+Move the bash script to the Termux `bin`
 ```
-cd termux-ecj-dx
 mv java /data/data/com.termux/files/usr/bin/java
 ```
-## 使用
-例
+## Usage
+To run `Thing.java` in the current directory
 ```
-java HelloWorld.java
+java Thing .
+```
+To run `HelloWorld.java` in the `program/` directory
+```
+java HelloWorld program/
 ```
